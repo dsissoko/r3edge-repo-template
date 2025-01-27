@@ -1,6 +1,6 @@
 # <r3edge-githubrepo-template>
 
-Bienvenue dans le dépôt **<r3edge-githubrepo-template>**, conçu comme un template GitHub pouvant être utilisé via la fonctionnalité **"Use this template"**. Ce dépôt fournit une structure de base pour créer et documenter vos projets, avec un exemple basé sur **r3edge-engine**, le moteur de trading algorithmique de la plateforme **r3edge**.
+Ce dépôt **<r3edge-githubrepo-template>** est conçu comme un template GitHub pouvant être utilisé via la fonctionnalité **"Use this template"**. Il fournit une structure de base pour créer et documenter vos projets.
 
 # Usage
 
