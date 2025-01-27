@@ -34,3 +34,5 @@ Ce projet est sous licence [Tous droits réservés](LICENSE).
 ---
 
 © 2024 r3edge. Tous droits réservés.
+
+[![Deploy Jekyll with GitHub Pages dependencies preinstalled](https://github.com/dsissoko/r3edge-githubrepo-template/actions/workflows/jekyll-gh-pages.yml/badge.svg)](https://github.com/dsissoko/r3edge-githubrepo-template/actions/workflows/jekyll-gh-pages.yml)
