@@ -17,7 +17,7 @@ Instructions pour exécuter le projet (ajoutez ici les commandes ou étapes spé
 # Documentation
 
 - [Documentation détaillée](docs/index.md)
-- [Sur GitHub Pages](https://dsissoko.github.io/<r3edge-githubrepo-template>/)
+- [Sur GitHub Pages](https://dsissoko.github.io/r3edge-githubrepo-template/)
 
 # Contribuer
 
