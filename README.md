@@ -1,6 +1,6 @@
-# <r3edge-githubrepo-template>
+# <r3edge-repo-template>
 
-Ce dépôt **<r3edge-githubrepo-template>** est conçu comme un template GitHub pouvant être utilisé via la fonctionnalité **"Use this template"**. Il fournit une structure de base pour créer et documenter vos projets.
+Ce dépôt **<r3edge-repo-template>** est conçu comme un template GitHub pouvant être utilisé via la fonctionnalité **"Use this template"**. Il fournit une structure de base pour créer et documenter vos projets.
 
 # Usage
 
@@ -17,7 +17,7 @@ Instructions pour exécuter le projet (ajoutez ici les commandes ou étapes spé
 # Documentation
 
 - [Documentation détaillée](docs/index.md)
-- [Sur GitHub Pages](https://dsissoko.github.io/r3edge-githubrepo-template/)
+- [Sur GitHub Pages](https://dsissoko.github.io/r3edge-repo-template/)
 
 # Contribuer
 
