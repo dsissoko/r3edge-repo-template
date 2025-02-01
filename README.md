@@ -76,7 +76,7 @@ Pour toute question ou suggestion, contactez-nous à [hello@r3edge.com](mailto:h
 
 ---
 
-## 🛡️ Licence
+## ⚖️ Licence
 
 Ce projet est sous licence **Tous droits réservés**.  
 Voir le fichier [LICENSE](LICENSE).
@@ -91,4 +91,4 @@ Voir le fichier [LICENSE](LICENSE).
 
 ![Build](https://img.shields.io/github/actions/workflow/status/dsissoko/r3edge-repo-template/build.yml?branch=main)
 ![Coverage](https://img.shields.io/codecov/c/github/dsissoko/r3edge-repo-template)
-![License](https://img.shields.io/github/license/dsissoko/r3edge-repo-template)
+![License](https://img.shields.io/badge/License-MIT-2f74c0?style=flat-square&logo=balance-scale)
