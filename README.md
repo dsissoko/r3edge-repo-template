@@ -14,6 +14,52 @@ Ce dépôt **r3edge-repo-template** sert de modèle pour structurer les projets 
 
 ---
 
+## 🔧 Prérequis
+
+Avant d'utiliser ce projet, assurez-vous que votre environnement répond aux exigences suivantes :
+
+### 📂 Système d'exploitation
+- Linux (Ubuntu/Debian, CentOS, etc.)
+- macOS
+- Windows avec WSL2 recommandé
+
+### 📦 Dépendances système
+- **Docker** (si le projet utilise Docker Compose)
+- **Docker Compose** (version 2.x recommandée)
+- **Kubernetes** (si le projet cible un cluster Kubernetes)
+- **Helm** (si l'application est déployée avec Helm Charts)
+- **Git** (gestion des versions)
+- **Python 3.x / Node.js / Java** (selon le stack du projet)
+
+### 🌐 Prérequis réseau
+- Ouverture des ports entrants/sortants nécessaires :
+  - `80, 443` pour les services web
+  - `5432` pour PostgreSQL (si utilisé)
+  - `6379` pour Redis (si utilisé)
+  - `9092` pour Kafka (si utilisé)
+- Accès Internet pour récupérer les dépendances et images Docker
+- Configuration d’un proxy si l’environnement l’exige
+
+### 🏢 Prérequis pour les environnements de production
+- **Sécurisation des accès** :
+  - Authentification et contrôle des accès aux services (IAM, RBAC, ACLs)
+  - Certificats TLS/SSL pour sécuriser les communications
+- **Scalabilité et haute disponibilité** :
+  - Cluster Kubernetes avec plusieurs nœuds
+  - Load balancer configuré pour répartir la charge
+  - Monitoring et alerting via Prometheus/Grafana
+- **Gestion des logs et métriques** :
+  - Centralisation des logs (ELK, Loki, etc.)
+  - Supervision des métriques d’application et d’infrastructure
+- **Politiques de backup et récupération** :
+  - Sauvegarde régulière des bases de données et fichiers critiques
+  - Plan de reprise après incident (Disaster Recovery)
+- **Restrictions réseau** :
+  - Firewall et règles de sécurité strictes
+  - Isolation des services via Network Policies Kubernetes
+
+---
+
 ## 🚀 Build & Déploiement
 
 ### 📦 Build
