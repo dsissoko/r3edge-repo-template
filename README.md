@@ -1,41 +1,94 @@
-# <r3edge-repo-template>
+# r3edge-repo-template
 
-Ce dépôt **<r3edge-repo-template>** est conçu comme un template GitHub pouvant être utilisé via la fonctionnalité **"Use this template"**. Il fournit une structure de base pour créer et documenter vos projets.
+Ce dépôt **r3edge-repo-template** sert de modèle pour structurer les projets de l'écosystème **r3edge**. Il peut être utilisé via la fonctionnalité **"Use this template"** de GitHub.
 
-# Usage
+## 📌 Usage
 
-Ce template peut être cloné ou utilisé directement sur GitHub pour créer un nouveau dépôt structuré. Cliquez sur le bouton **"Use this template"** sur la page GitHub du dépôt pour démarrer.
+1. **Cloner le dépôt** :  
+   ```bash
+   git clone https://github.com/dsissoko/r3edge-repo-template.git
+   cd r3edge-repo-template
+   ```
+2. **Ou utiliser le template** :  
+   Cliquez sur **"Use this template"** pour créer un nouveau projet basé sur cette structure.
 
-# BUILD
+---
 
-Instructions pour construire votre projet (ajoutez ici les commandes ou étapes spécifiques).
+## 🚀 Build & Déploiement
 
-# RUN
+### 📦 Build
+Instructions pour compiler / packager le projet :
+```bash
+# Exemple (à adapter)
+./build.sh
+```
 
-Instructions pour exécuter le projet (ajoutez ici les commandes ou étapes spécifiques).
+### ▶️ Exécution
+Démarrer l’application :
+```bash
+# Exemple (à adapter)
+./run.sh
+```
 
-# Documentation
+### ⚙️ Déploiement
+Déploiement sur un environnement cible :
+```bash
+# Exemple pour Kubernetes (à adapter)
+kubectl apply -f k8s/deployment.yaml
+```
 
-- [Documentation détaillée](docs/index.md)
-- [Sur GitHub Pages](https://dsissoko.github.io/r3edge-repo-template/)
+---
 
-# Contribuer
+## 🛠️ Configuration & Variables d’environnement
 
-Nous n'acceptons pas les contributions externes à la documentation pour le moment. Toute utilisation ou modification de cette documentation est strictement interdite sans autorisation préalable.
+Le projet utilise plusieurs types d’emplacements pour gérer les configurations :
 
-# Support
+| Type | Description |
+|------|------------|
+| **Ligne de commande** | `./app --log-level=debug --cache-ttl=600` |
+| **Variables d’environnement (EnvVar)** | `export DATABASE_URL=...` |
+| **Fichier `.env`** | `.env`, `.env.dev`, `.env.prod` |
+| **Fichier de configuration** | `config.yaml`, `application.properties` |
+| **Gestionnaire de secrets** | Vault, AWS Secrets Manager, Kubernetes Secrets |
+| **Secrets GitHub Actions** | Variables CI/CD définies dans `Settings > Secrets` |
 
-Pour toute question ou suggestion, veuillez contacter l'équipe de support à [hello@r3edge.com](mailto:hello@r3edge.com).
+### 📌 Exemples de variables clés
 
-# Licence
+| Nom | Obligatoire ? | Valeur par défaut | Description | Emplacement source |
+|---------|----------------|----------------|----------------|----------------|
+| `DATABASE_URL` | ✅ Oui | `-` | URL de connexion DB | `1️⃣ EnvVar → 2️⃣ .env → 3️⃣ ConfigFile` |
+| `GITHUB_TOKEN` | ✅ Oui | `-` | Token GitHub pour CI/CD | `1️⃣ GitHub Secrets → 2️⃣ EnvVar` |
 
-Ce projet est sous licence [Tous droits réservés](LICENSE).
+📚 **Liste complète et instructions d’utilisation** : [config/README.md](config/README.md)
+
+---
+
+## 🤝 Contribution
+
+Nous n’acceptons pas les contributions externes pour l’instant.  
+Toute modification de cette documentation requiert une validation préalable.
+
+---
+
+## 📞 Support
+
+Pour toute question ou suggestion, contactez-nous à [hello@r3edge.com](mailto:hello@r3edge.com).
+
+---
+
+## 🛡️ Licence
+
+Ce projet est sous licence **Tous droits réservés**.  
+Voir le fichier [LICENSE](LICENSE).
 
 ---
 
 © 2024 r3edge. Tous droits réservés.
 
+---
 
-# Badges
+## 🏆 Badges
 
-
+![Build](https://img.shields.io/github/actions/workflow/status/dsissoko/r3edge-repo-template/build.yml?branch=main)
+![Coverage](https://img.shields.io/codecov/c/github/dsissoko/r3edge-repo-template)
+![License](https://img.shields.io/github/license/dsissoko/r3edge-repo-template)
