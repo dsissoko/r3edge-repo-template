@@ -32,100 +32,88 @@ Avant d'utiliser ce projet, assurez-vous que votre environnement répond aux exi
 - **Python 3.x / Node.js / Java** (selon le stack du projet)
 
 ### 🌐 Prérequis réseau
-- Ouverture des ports entrants/sortants nécessaires :
-  - `80, 443` pour les services web
-  - `5432` pour PostgreSQL (si utilisé)
-  - `6379` pour Redis (si utilisé)
-  - `9092` pour Kafka (si utilisé)
+- Ouverture des ports entrants/sortants nécessaires
 - Accès Internet pour récupérer les dépendances et images Docker
-- Configuration d’un proxy si l’environnement l’exige
-
-### 🏢 Prérequis pour les environnements de production
-- **Sécurisation des accès** :
-  - Authentification et contrôle des accès aux services (IAM, RBAC, ACLs)
-  - Certificats TLS/SSL pour sécuriser les communications
-- **Scalabilité et haute disponibilité** :
-  - Cluster Kubernetes avec plusieurs nœuds
-  - Load balancer configuré pour répartir la charge
-  - Monitoring et alerting via Prometheus/Grafana
-- **Gestion des logs et métriques** :
-  - Centralisation des logs (ELK, Loki, etc.)
-  - Supervision des métriques d’application et d’infrastructure
-- **Politiques de backup et récupération** :
-  - Sauvegarde régulière des bases de données et fichiers critiques
-  - Plan de reprise après incident (Disaster Recovery)
-- **Restrictions réseau** :
-  - Firewall et règles de sécurité strictes
-  - Isolation des services via Network Policies Kubernetes
+- Configuration d’un proxy si nécessaire
 
 ---
 
 ## 🚀 Build & Déploiement
 
 ### 📦 Build
-Instructions pour compiler / packager le projet :
 ```bash
-# Exemple (à adapter)
-./build.sh
+./build.sh  # Exemple, à adapter
 ```
 
 ### ▶️ Exécution
-Démarrer l’application :
 ```bash
-# Exemple (à adapter)
-./run.sh
+./run.sh  # Exemple, à adapter
 ```
 
 ### ⚙️ Déploiement
-Déploiement sur un environnement cible :
 ```bash
-# Exemple pour Kubernetes (à adapter)
-kubectl apply -f k8s/deployment.yaml
+kubectl apply -f k8s/deployment.yaml  # Exemple pour Kubernetes
 ```
 
 ---
 
-## 🛠️ Configuration & Variables d’environnement
+## 🛠️ Configuration
 
-Le projet utilise plusieurs types d’emplacements pour gérer les configurations :
+### 🔹 Variables externalisées
 
-| Type | Description |
-|------|------------|
-| **Ligne de commande** | `./app --log-level=debug --cache-ttl=600` |
-| **Variables d’environnement (EnvVar)** | `export DATABASE_URL=...` |
-| **Fichier `.env`** | `.env`, `.env.dev`, `.env.prod` |
-| **Fichier de configuration** | `config.yaml`, `application.properties` |
-| **Gestionnaire de secrets** | Vault, AWS Secrets Manager, Kubernetes Secrets |
-| **Secrets GitHub Actions** | Variables CI/CD définies dans `Settings > Secrets` |
+#### 📌 Issues des dépendances
+Ces variables sont définies par les librairies utilisées et doivent être configurées selon leur documentation officielle.
 
-### 📌 Exemples de variables clés
+| Dépendance | Documentation |
+|------------|--------------|
+| Spring Boot | [Spring Docs](https://docs.spring.io/spring-boot/docs/current/reference/html/application-properties.html) |
+| Kafka | [Kafka Docs](https://kafka.apache.org/documentation/) |
+| PostgreSQL | [PostgreSQL Docs](https://www.postgresql.org/docs/) |
 
-| Nom | Obligatoire ? | Valeur par défaut | Description | Emplacement source |
-|---------|----------------|----------------|----------------|----------------|
-| `DATABASE_URL` | ✅ Oui | `-` | URL de connexion DB | `1️⃣ EnvVar → 2️⃣ .env → 3️⃣ ConfigFile` |
-| `GITHUB_TOKEN` | ✅ Oui | `-` | Token GitHub pour CI/CD | `1️⃣ GitHub Secrets → 2️⃣ EnvVar` |
+#### 📌 Spécifiques à l'application
+Ces variables sont définies au niveau de l'application.
+
+| Nom | Valeur par défaut | Description | Source |
+|-----|------------------|-------------|--------|
+| `APP_ENV` | `dev` | Environnement d'exécution | `.env`, Spring Profile |
+| `LOG_LEVEL` | `INFO` | Niveau de logs (`DEBUG`, `INFO`, `WARN`, `ERROR`) | `.env`, CLI |
+| `DATABASE_URL` | `-` | URL de connexion à la base de données | `.env`, Kubernetes Secret |
+
+---
+
+### 🔹 Paramètres de démarrage
+
+#### 📌 Issues des dépendances
+
+| Dépendance | Exemples de paramètres | Documentation |
+|------------|-----------------------|--------------|
+| Spring Boot | `--spring.profiles.active=prod` | [Spring Docs](https://docs.spring.io/spring-boot/docs/current/reference/html/application-properties.html) |
+| Kafka | `--bootstrap-server=localhost:9092` | [Kafka Docs](https://kafka.apache.org/documentation/) |
+
+#### 📌 Spécifiques à l'application
+
+| Nom | Valeur par défaut | Description |
+|-----|------------------|-------------|
+| `--debug` | `false` | Active le mode debug |
+| `--cache-ttl` | `600` | Durée de mise en cache en secondes |
+| `--max-workers` | `4` | Nombre de workers utilisés |
 
 📚 **Liste complète et instructions d’utilisation** : [config/README.md](config/README.md)
 
 ---
 
 ## 🤝 Contribution
-
-Nous n’acceptons pas les contributions externes pour l’instant.  
-Toute modification de cette documentation requiert une validation préalable.
+Nous n’acceptons pas les contributions externes pour l’instant.
 
 ---
 
 ## 📞 Support
-
-Pour toute question ou suggestion, contactez-nous à [hello@r3edge.com](mailto:hello@r3edge.com).
+Pour toute question, contactez-nous à [hello@r3edge.com](mailto:hello@r3edge.com).
 
 ---
 
 ## ⚖️ Licence
-
-Ce projet est sous licence **Tous droits réservés**.  
-Voir le fichier [LICENSE](LICENSE).
+Ce projet est sous licence **Tous droits réservés**.
 
 ---
 
