@@ -19,3 +19,7 @@ Bienvenue dans la documentation de **<r3edge-repo-template>**. Cette page sert d
 
 ---
 ## [🚀 Deploy](Deploy.md)
+
+---
+
+© 2024 r3edge. [**Tous droits réservés**](../LICENSE).

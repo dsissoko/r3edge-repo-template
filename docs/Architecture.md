@@ -1,10 +1,6 @@
 # Architecture
 
 
----
-
-## ⚖️ Licence
-Ce projet est sous licence **Tous droits réservés**.
 
 ---
 
