@@ -1,21 +1,20 @@
 ---
-# Front matter obligatoire pour activer le traitement Sass par Jekyll
 ---
 
-@import "jekyll-theme-leap-day";
+@import 'jekyll-theme-leap-day';
 
-/* Personnalisation pour un mode sombre */
 body {
-  background-color: #121212;
-  color: #e0e0e0;
+    font: unset;
+    color: #000000;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  color: #ffffff;
+header {   
+    background: #000000; 
+    h1 {
+        color: #D8AB4C;
+    }
 }
 
-a {
-  color: #bb86fc;
+#banner { 
+    background: #D8AB4C;
 }
-
-/* Tu peux ajouter d'autres surcharges au besoin */
