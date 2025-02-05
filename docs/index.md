@@ -3,12 +3,12 @@
 Bienvenue dans la documentation de **<r3edge-repo-template>**. Cette page sert de point de départ pour la documentation détaillé du dépôt.
 
 ---
-## [Architecture](Architecture.md)
+## [🧩 Architecture](Architecture.md)
 ---
-## [Configuration](Configuration.md)
+## [⚙️ Configuration](Configuration.md)
 ---
-## [Build](Build.md)
+## [📦 Build](Build.md)
 ---
-## [Deploy](Deploy.md)
+## [🚀 Deploy](Deploy.md)
 ---
-## [Prérequis](Prerequis.md)
+## [📋 Prérequis](Prerequis.md)
