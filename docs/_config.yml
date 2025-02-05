@@ -5,3 +5,4 @@ plugins:
 gem "github-pages", group: :jekyll_plugins
 title: [R3edge Repo Template]
 description: [Modèle de documentation]
+markdown: kramdown
