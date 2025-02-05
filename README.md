@@ -36,6 +36,4 @@ Pour toute question, contactez-nous à [hello@r3edge.com](mailto:hello@r3edge.co
 
 ## 🏆 Badges
 
-![Build](https://img.shields.io/github/actions/workflow/status/dsissoko/r3edge-repo-template/build.yml?branch=main)
-![Coverage](https://img.shields.io/codecov/c/github/dsissoko/r3edge-repo-template)
-![License](https://img.shields.io/badge/License-MIT-2f74c0?style=flat-square&logo=balance-scale)
+[![Deploy on  GITHUBPAGES](https://github.com/dsissoko/r3edge-repo-template/actions/workflows/githubpages.yml/badge.svg)](https://github.com/dsissoko/r3edge-repo-template/actions/workflows/githubpages.yml)
