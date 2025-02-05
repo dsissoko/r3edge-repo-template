@@ -5,8 +5,6 @@ Bienvenue dans la documentation de **<r3edge-repo-template>**. Cette page sert d
 
 toc: true
 
-{% include toc.html html=content %}
-
 ---
 ## [📌 Le(s) cas d'usage](Usages.md)
 
