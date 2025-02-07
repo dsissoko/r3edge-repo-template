@@ -2,18 +2,11 @@
 
 ## 🔹 Variables externalisées
 
-### 📌 Issues des dépendances
-
-### 📌 Spécifiques à l'application
 
 ---
 
 ## 🔹 Paramètres de démarrage
 
-
-### 📌 Issues des dépendances
-
-### 📌 Spécifiques à l'application
 
 ---
 
