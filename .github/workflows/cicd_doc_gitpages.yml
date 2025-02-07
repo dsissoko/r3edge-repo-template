@@ -22,7 +22,7 @@ jobs:
   set-plan:
     runs-on: ubuntu-latest
     outputs:
-      planType: 'pasfree'  # vous pouvez directement retourner "pasfree"
+      planType: 'free'  # vous pouvez directement retourner "pasfree"
     steps:
       - name: Set plan type
         id: setplan
