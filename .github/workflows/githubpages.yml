@@ -2,8 +2,14 @@
 name: Deploy on  GITHUBPAGES
 
 on:
-  # Runs on pushes targeting the default branch
   push:
+    branches:
+      - main
+    paths:
+      - 'docs/**'
+  pull_request:
+    branches:
+      - main
     paths:
       - 'docs/**'
   # Allows you to run this workflow manually from the Actions tab
