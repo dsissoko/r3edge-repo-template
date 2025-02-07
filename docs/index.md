@@ -2,7 +2,7 @@
 
 Bienvenue dans la documentation de **<r3edge-repo-template>**. Cette page sert de point de départ pour la documentation détaillé du dépôt.
 
-ajouter la version ici !
+ajouter la version ici !!!
 
 
 ---
