@@ -31,7 +31,7 @@ jobs:
   # Build job
   build:
     # Pour activer le build, remplacez 'false' par 'true'
-    if: ${{ false }}
+    if: ${{ true }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -49,7 +49,7 @@ jobs:
   # Deployment job, qui s'exécute uniquement si pages_enabled est "true"
   deploy:
     # Pour activer le déploiement, remplacez 'false' par 'true'
-    if: ${{ false }}
+    if: ${{ true }}
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
