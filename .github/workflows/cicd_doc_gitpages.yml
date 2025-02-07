@@ -1,5 +1,5 @@
 # Sample workflow for building and deploying a Jekyll site to GitHub Pages
-name: Deploy on  GITHUBPAGES
+name: Markdown CICD with Jekyll to GITPAGES
 
 on:
   push:
@@ -30,6 +30,8 @@ concurrency:
 jobs:
   # Build job
   build:
+    # Pour activer le build, remplacez 'false' par 'true'
+    if: ${{ false }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -44,8 +46,10 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 
-  # Deployment job
+  # Deployment job, qui s'exécute uniquement si pages_enabled est "true"
   deploy:
+    # Pour activer le déploiement, remplacez 'false' par 'true'
+    if: ${{ false }}
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
