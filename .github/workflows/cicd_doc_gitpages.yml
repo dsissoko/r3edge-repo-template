@@ -30,7 +30,7 @@ jobs:
 
   build:
     needs: set-plan
-    if: ${{ needs.set-plan.outputs.planType != 'free' }}
+    if: ${{ needs.set-plan.outputs.planType == 'free' }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -47,7 +47,7 @@ jobs:
 
   deploy:
     needs: [set-plan, build]
-    if: ${{ needs.set-plan.outputs.planType != 'free' }}
+    if: ${{ needs.set-plan.outputs.planType == 'free' }}
     runs-on: ubuntu-latest
     environment:
       name: github-pages
