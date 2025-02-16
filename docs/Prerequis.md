@@ -21,7 +21,7 @@ Avant d'utiliser ce projet, assurez-vous que votre environnement répond aux exi
 - Configuration d’un proxy si nécessaire
 
 ---
-[Retour au sommaire](index.md)
+[🏠 Retour au sommaire](index.md)
 
 ---
 © 2024 r3edge. [**Tous droits réservés**](../LICENSE).
